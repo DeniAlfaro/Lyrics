@@ -32,10 +32,13 @@ namespace Lyrics
         //Comunicacion con la tarjeta de audio exclusiva
         WaveOut output;
 
+        int indexActual;
+
         bool dragging = false;
         public MainWindow()
         {
             InitializeComponent();
+            indexActual = 0;
             timer = new DispatcherTimer();
             timer.Interval = TimeSpan.FromMilliseconds(500);
             timer.Tick += Timer_Tick;
@@ -46,6 +49,28 @@ namespace Lyrics
             if (!dragging)
             {
                 ProgressBar.Value = reader.CurrentTime.TotalSeconds;
+            }
+
+            var segundosActuales = reader.CurrentTime.TotalSeconds;
+            var segundosTotales = reader.TotalTime.TotalSeconds;
+            var listaCambiosSegundos = new List<int>() {
+
+            };
+            var listaCambiosTextos = new List<String>() {
+
+            };
+
+            var segundosCambioSiguiente = listaCambiosSegundos[indexActual];
+
+            if (segundosActuales >= segundosCambioSiguiente)
+            {
+                var textoCambioSiguiente = listaCambiosTextos[indexActual];
+                txtLetra.Text = textoCambioSiguiente;
+
+                if (listaCambiosSegundos.Count > indexActual + 1)
+                {
+                    indexActual++;
+                }
             }
         }
 
@@ -88,3 +113,46 @@ namespace Lyrics
         }
     }
 }
+
+/*
+ * When your legs don't work like they used to before
+And I can't sweep you off of your feet
+Will your mouth still remember the taste of my love
+Will your eyes still smile from your cheeks
+And darling I will be loving you 'til we're 70
+And baby my heart could still fall as hard at 23
+And I'm thinking 'bout how people fall in love in mysterious ways
+Maybe just the touch of a hand
+Oh me I fall in love with you every single day
+And I just wanna tell you I am
+So honey now
+Take me into your loving arms
+Kiss me under the light of a thousand stars
+Place your head on my beating heart
+I'm thinking out loud
+Maybe we found love right where we are
+When my hair's all but gone and my memory fades
+And the crowds don't remember my name
+When my hands don't play the strings the same way, mm
+I know you will still love me the same
+'Cause honey your soul can never grow old, it's evergreen
+Baby your smile's forever in my mind and memory
+I'm thinking 'bout how people fall in love in mysterious ways
+Maybe it's all part of a plan
+I'll just keep on making the same mistakes
+Hoping that you'll understand
+But baby now
+Take me into your loving arms
+Kiss me under the light of a thousand stars
+Place your head on my beating heart
+I'm thinking out loud
+That maybe we found love right where we are, oh
+So baby now
+Take me into your loving arms
+Kiss me under the light of a thousand stars
+Oh darling, place your head on my beating heart
+I'm thinking out loud
+That maybe we found love right where we are
+Oh maybe we found love right where we are
+And we found love right where we are
+*/
