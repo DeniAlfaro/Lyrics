@@ -54,10 +54,41 @@ namespace Lyrics
             var segundosActuales = reader.CurrentTime.TotalSeconds;
             var segundosTotales = reader.TotalTime.TotalSeconds;
             var listaCambiosSegundos = new List<int>() {
+                9,
+                14,
+                27,
+                48,
+                62,
+                75,
+                91,
+                100,
+                108,
+                119,
+                130,
+                150,
 
             };
             var listaCambiosTextos = new List<String>() {
-
+                "When your legs don't work like they used to before",
+                "And I can't sweep you off of your feet",
+                "Will your mouth still remember the taste of my love? \n Will your eyes still smile from your cheeks",
+                "And darling I will be loving you 'til we're 70 \n And baby my heart could still fall as hard at 23",
+                "And I'm thinking 'bout how people fall in love in mysterious ways \n Maybe just the touch of a hand",
+                "Well me I fall in love with you every single day \n And I just wanna tell you I am",
+                "So honey now \nTake me into your loving arms \n Kiss me under the light of a thousand stars",
+                "Place your head on my beating heart \n I'm thinking out loud",
+                "Maybe we found love right where we are",
+                "When my hair's all but gone and my memory fades \nAnd the crowds don't remember my name",
+                "When my hands don't play the strings the same way, \nI know you will still love me the same",
+                "Cause honey your soul can never grow old, it's evergreen \nBaby your smile's forever in my mind and memory",
+                "I'm thinking 'bout how people \nfall in love in mysterious ways",
+                "Maybe it's all part of a plan \nI'll just keep on making the same mistakes \nHoping that you'll understand",
+                "But baby now \nTake me into your loving arms \nKiss me under the light of a thousand stars",
+                "Place your head on my beating heart \n I'm thinking out loud",
+                "That maybe we found love right where we are, oh \nSo baby now",
+                "Take me into your loving arms \nKiss me under the light of a thousand stars",
+                "Oh darling, place your head on my beating heart \nI'm thinking out loud",
+                "That maybe we found love right where we are \nOh maybe we found love right where we are \nAnd we found love right where we are",
             };
 
             var segundosCambioSiguiente = listaCambiosSegundos[indexActual];
@@ -86,6 +117,7 @@ namespace Lyrics
 
             ProgressBar.Maximum = reader.TotalTime.TotalSeconds;
             ProgressBar.Value = reader.CurrentTime.TotalSeconds;
+            txtLetra.Visibility = Visibility.Visible;
 
             timer.Start();
         }

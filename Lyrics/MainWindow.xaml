@@ -11,7 +11,7 @@
                      Thumb.DragStarted="ProgressBar_DragStarted"
                      Thumb.DragCompleted="ProgressBar_DragCompleted"/>
         <Button x:Name="btnReproducir" Content="Reproducir" HorizontalAlignment="Left" Margin="356,77,0,0" VerticalAlignment="Top" Width="75" Click="BtnReproducir_Click" />
-        <TextBlock x:Name="txtLetra" HorizontalAlignment="Left" Margin="89,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="181" Width="590" FontSize="36" TextAlignment="Center" FontFamily="Verdana"/>
+        <TextBlock x:Name="txtLetra" HorizontalAlignment="Left" Margin="89,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="181" Width="590" FontSize="36" TextAlignment="Center" FontFamily="Verdana" Visibility="Hidden"/>
 
     </Grid>
 </Window>
