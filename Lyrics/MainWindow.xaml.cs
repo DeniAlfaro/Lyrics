@@ -54,19 +54,25 @@ namespace Lyrics
             var segundosActuales = reader.CurrentTime.TotalSeconds;
             var segundosTotales = reader.TotalTime.TotalSeconds;
             var listaCambiosSegundos = new List<int>() {
-                9,
-                14,
-                27,
-                48,
-                62,
-                75,
-                91,
-                100,
-                108,
-                119,
-                130,
-                150,
-
+                7,
+                13,
+                17,
+                28,
+                49,
+                64,
+                78,
+                95,
+                103,
+                110,
+                120,
+                131,
+                152,
+                163,
+                181,
+                197,
+                205,
+                212,
+                260
             };
             var listaCambiosTextos = new List<String>() {
                 "When your legs don't work like they used to before",
@@ -85,8 +91,8 @@ namespace Lyrics
                 "Maybe it's all part of a plan \nI'll just keep on making the same mistakes \nHoping that you'll understand",
                 "But baby now \nTake me into your loving arms \nKiss me under the light of a thousand stars",
                 "Place your head on my beating heart \n I'm thinking out loud",
-                "That maybe we found love right where we are, oh \nSo baby now",
-                "Take me into your loving arms \nKiss me under the light of a thousand stars",
+                "That maybe we found love right where we are, oh",
+                "So baby now \nTake me into your loving arms \nKiss me under the light of a thousand stars",
                 "Oh darling, place your head on my beating heart \nI'm thinking out loud",
                 "That maybe we found love right where we are \nOh maybe we found love right where we are \nAnd we found love right where we are",
             };
